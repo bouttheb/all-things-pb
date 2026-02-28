@@ -12,7 +12,7 @@ const PLATFORM_LABELS: Record<string, string> = {
   youtube: "YOUTUBE",
   instagram: "INSTAGRAM",
   podcast: "PODCASTS",
-  spotify: "SPOTIFY",
+  spotify: "MUSIC",
 };
 
 export default function PlatformFilter({ selected, onChange }: PlatformFilterProps) {

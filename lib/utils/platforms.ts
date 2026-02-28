@@ -27,7 +27,7 @@ export const PLATFORMS: Record<Platform, PlatformConfig> = {
     textClass: "text-purple-600",
   },
   spotify: {
-    name: "Spotify",
+    name: "Music",
     color: "#1DB954",
     bgClass: "bg-green-500",
     textClass: "text-green-500",

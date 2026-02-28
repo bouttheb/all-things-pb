@@ -35,6 +35,10 @@ export default function FeedCard({ post }: { post: Post }) {
       case "youtube":
         return <YouTubePlayer videoId={extractYouTubeId(post.embed_url || "")} />;
       case "spotify":
+        // Music from YouTube Music channel uses YouTube player for full playback
+        if (metadata.source === "youtube_music" || (post.embed_url || "").includes("youtube.com")) {
+          return <YouTubePlayer videoId={extractYouTubeId(post.embed_url || "")} />;
+        }
         return (
           <SpotifyPlayer
             embedUrl={post.embed_url || ""}

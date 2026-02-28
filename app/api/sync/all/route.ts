@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { validateCronSecret } from "@/lib/utils/auth-guard";
 import { syncYouTube } from "@/lib/sync/youtube";
 import { syncPodcast } from "@/lib/sync/podcast";
-import { syncSpotify } from "@/lib/sync/spotify";
 import { syncInstagram } from "@/lib/sync/instagram";
 import { syncInstagramStories } from "@/lib/sync/instagram-stories";
 import type { SyncResult } from "@/types";
@@ -15,10 +14,10 @@ export async function GET(request: NextRequest) {
   const results: SyncResult[] = [];
 
   // Run syncs sequentially to stay within serverless time limits
+  // Note: Music is synced via YouTube (YOUTUBE_MUSIC_CHANNEL_ID) — Spotify sync disabled
   const syncs = [
     syncYouTube,
     syncPodcast,
-    syncSpotify,
     syncInstagram,
     syncInstagramStories,
   ];
