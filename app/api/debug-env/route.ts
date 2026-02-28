@@ -1,15 +1,46 @@
 import { NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 
 export async function GET() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
+
+  // Try a direct fetch to Supabase REST API
+  let directFetchResult = "not tested";
+  try {
+    const res = await fetch(`${url}/rest/v1/posts?select=id&limit=1`, {
+      headers: {
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+      },
+    });
+    directFetchResult = `status=${res.status}, ok=${res.ok}`;
+    if (!res.ok) {
+      const body = await res.text();
+      directFetchResult += `, body=${body.substring(0, 200)}`;
+    }
+  } catch (e: unknown) {
+    directFetchResult = `error: ${e instanceof Error ? e.message : String(e)}`;
+  }
+
+  // Try with supabase-js client
+  let clientResult = "not tested";
+  try {
+    const supabase = createClient(url, serviceKey);
+    const { data, error } = await supabase.from("posts").select("id").limit(1);
+    if (error) {
+      clientResult = `error: ${error.message} (code: ${error.code})`;
+    } else {
+      clientResult = `success, rows=${data?.length || 0}`;
+    }
+  } catch (e: unknown) {
+    clientResult = `exception: ${e instanceof Error ? e.message : String(e)}`;
+  }
+
   return NextResponse.json({
-    hasUrl: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
-    urlLength: process.env.NEXT_PUBLIC_SUPABASE_URL?.length || 0,
-    urlPrefix: process.env.NEXT_PUBLIC_SUPABASE_URL?.substring(0, 20) || "MISSING",
-    hasAnonKey: !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-    anonKeyLength: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.length || 0,
-    anonKeyPrefix: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.substring(0, 16) || "MISSING",
-    hasServiceKey: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
-    serviceKeyLength: process.env.SUPABASE_SERVICE_ROLE_KEY?.length || 0,
-    serviceKeyPrefix: process.env.SUPABASE_SERVICE_ROLE_KEY?.substring(0, 12) || "MISSING",
+    urlLength: url.length,
+    serviceKeyLength: serviceKey.length,
+    directFetchResult,
+    clientResult,
   });
 }
