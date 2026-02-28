@@ -62,7 +62,7 @@ export default function FeedCard({ post }: { post: Post }) {
       {/* Header row — platform + time */}
       <div className="flex items-center justify-between px-5 pt-4 pb-3">
         <PlatformLabel platform={post.platform} />
-        <span className="text-[10px] font-medium text-[var(--color-slate)] tracking-wide">
+        <span className="text-[10px] font-medium text-[var(--color-muted)] tracking-wide">
           {timeAgo(post.published_at)}
         </span>
       </div>
@@ -92,7 +92,7 @@ export default function FeedCard({ post }: { post: Post }) {
                     width={20}
                     height={20}
                     viewBox="0 0 24 24"
-                    fill="var(--color-navy)"
+                    fill="var(--color-ink)"
                     className="ml-0.5"
                   >
                     <path d="M8 5v14l11-7z" />
@@ -116,7 +116,7 @@ export default function FeedCard({ post }: { post: Post }) {
           </h3>
         )}
         {post.description && (
-          <p className="text-[12px] text-[var(--color-slate)] mt-1.5 line-clamp-2 leading-relaxed font-light">
+          <p className="text-[12px] text-[var(--color-muted)] mt-1.5 line-clamp-2 leading-relaxed font-light">
             {post.description}
           </p>
         )}

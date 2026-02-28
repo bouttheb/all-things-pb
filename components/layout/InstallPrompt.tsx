@@ -41,7 +41,7 @@ export default function InstallPrompt() {
   };
 
   return (
-    <div className="fixed bottom-5 left-5 right-5 z-50 max-w-md mx-auto bg-[var(--color-surface)] border border-[var(--color-border-visible)] rounded-sm p-5 shadow-lg animate-fade-in-up">
+    <div className="fixed bottom-5 left-5 right-5 z-50 max-w-md mx-auto bg-[var(--color-surface)] border border-[var(--color-border)] rounded-sm p-5 animate-fade-in-up">
       <div className="flex items-center justify-between gap-4">
         <div className="flex-1 min-w-0">
           <p
@@ -50,21 +50,21 @@ export default function InstallPrompt() {
           >
             Install App
           </p>
-          <p className="text-[11px] text-[var(--color-slate)] mt-1 font-light">
+          <p className="text-[11px] text-[var(--color-muted)] mt-1 font-light">
             Add to home screen for the best experience.
           </p>
         </div>
         <div className="flex gap-3 shrink-0">
           <button
             onClick={handleDismiss}
-            className="text-[11px] text-[var(--color-slate)] hover:text-[var(--color-bone)] px-2 py-1.5 transition-colors tracking-wide uppercase"
+            className="text-[11px] text-[var(--color-muted)] hover:text-[var(--color-bone)] px-2 py-1.5 transition-colors tracking-wide uppercase"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Later
           </button>
           <button
             onClick={handleInstall}
-            className="text-[11px] font-semibold uppercase tracking-[0.1em] bg-[var(--color-bone)] text-[var(--color-navy)] px-5 py-1.5 rounded-sm hover:opacity-90 transition-opacity"
+            className="text-[11px] font-semibold uppercase tracking-[0.1em] bg-[var(--color-bone)] text-[var(--color-ink)] px-5 py-1.5 rounded-sm hover:opacity-90 transition-opacity"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Install

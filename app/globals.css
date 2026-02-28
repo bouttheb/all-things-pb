@@ -3,22 +3,18 @@
 
 @theme {
   /* Brand: Primary Palette */
-  --color-navy: #0B1A2A;
-  --color-bone: #F5F3EE;
-  --color-gold: #C6A75E;
+  --color-ink: #0A0B12;
+  --color-bone: #F2EFE8;
+  --color-brass: #B79A4A;
 
-  /* Brand: Secondary */
-  --color-slate: #4B5563;
-  --color-charcoal: #1F2933;
-  --color-forest: #1C2B26;
+  /* Brand: Surfaces & Borders */
+  --color-surface: #10131F;
+  --color-border: #1E2235;
 
-  /* Functional */
-  --color-border: rgba(245, 243, 238, 0.08);
-  --color-border-visible: rgba(245, 243, 238, 0.14);
-  --color-surface: #0F2236;
-  --color-surface-elevated: #132A40;
+  /* Brand: Text */
+  --color-muted: #CFC8B8;
 
-  /* Platform colors (muted to fit brand) */
+  /* Platform colors */
   --color-youtube: #FF0000;
   --color-instagram: #E4405F;
   --color-podcast: #9933FF;
@@ -36,7 +32,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-navy);
+  background-color: var(--color-ink);
   color: var(--color-bone);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -52,16 +48,16 @@ body {
   scrollbar-width: none;
 }
 
-/* ======= GOLD DIVIDER ======= */
-.gold-line {
+/* ======= BRASS DIVIDER ======= */
+.brass-line {
   height: 1px;
-  background-color: var(--color-gold);
-  opacity: 0.4;
+  background-color: var(--color-brass);
+  opacity: 0.35;
 }
 
 /* ======= STORY RING ======= */
 .story-ring {
-  border: 2px solid var(--color-gold);
+  border: 2px solid var(--color-brass);
   border-radius: 9999px;
   padding: 2px;
   transition: opacity 0.3s ease;
@@ -77,28 +73,28 @@ body {
   transition: border-color 0.3s ease;
 }
 .content-card:hover {
-  border-color: var(--color-border-visible);
+  border-color: #2A2E45;
 }
 
 /* ======= FILTER PILL ======= */
 .filter-pill {
-  border: 1px solid var(--color-border-visible);
+  border: 1px solid var(--color-border);
   background: transparent;
   transition: all 0.25s ease;
 }
 .filter-pill:hover {
-  border-color: var(--color-bone);
+  border-color: var(--color-muted);
   color: var(--color-bone);
 }
 .filter-pill.active {
   background-color: var(--color-bone);
   border-color: var(--color-bone);
-  color: var(--color-navy);
+  color: var(--color-ink);
 }
 
 /* ======= PLAY BUTTON ======= */
 .play-btn {
-  background-color: rgba(245, 243, 238, 0.9);
+  background-color: rgba(242, 239, 232, 0.9);
   transition: opacity 0.25s ease;
 }
 .play-btn:hover {
@@ -136,7 +132,7 @@ body {
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(245, 243, 238, 0.03) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(242, 239, 232, 0.03) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 2.5s ease-in-out infinite;
 }
@@ -148,8 +144,3 @@ body {
 .feed-card:nth-child(4) { animation-delay: 240ms; }
 .feed-card:nth-child(5) { animation-delay: 320ms; }
 .feed-card:nth-child(6) { animation-delay: 400ms; }
-
-/* ======= THUMBNAIL OVERLAY ======= */
-.thumb-overlay {
-  background: linear-gradient(to top, var(--color-navy) 0%, transparent 60%);
-}

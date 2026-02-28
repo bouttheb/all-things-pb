@@ -14,8 +14,8 @@ interface FeedListProps {
 function EmptyState() {
   return (
     <div className="flex flex-col items-center justify-center py-28 px-6">
-      {/* Gold accent line */}
-      <div className="w-8 h-[1px] bg-[var(--color-gold)] mb-8" style={{ opacity: 0.5 }} />
+      {/* Brass accent line */}
+      <div className="w-8 h-[1px] bg-[var(--color-brass)] mb-8" style={{ opacity: 0.4 }} />
 
       <h3
         className="text-sm font-semibold uppercase tracking-[0.15em] text-[var(--color-bone)] mb-3"
@@ -23,7 +23,7 @@ function EmptyState() {
       >
         Coming Soon
       </h3>
-      <p className="text-[13px] text-[var(--color-slate)] text-center max-w-xs leading-relaxed font-light">
+      <p className="text-[13px] text-[var(--color-muted)] text-center max-w-xs leading-relaxed font-light">
         Fresh content is on the way.
       </p>
     </div>

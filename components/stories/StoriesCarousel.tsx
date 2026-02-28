@@ -19,7 +19,7 @@ export default function StoriesCarousel({ stories }: StoriesCarouselProps) {
       <div className="border-b border-[var(--color-border)]">
         <div className="max-w-3xl mx-auto px-6 py-5">
           <p
-            className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[var(--color-slate)] mb-4"
+            className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[var(--color-muted)] mb-4"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Stories

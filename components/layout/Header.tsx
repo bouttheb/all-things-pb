@@ -2,10 +2,10 @@ export default function Header() {
   return (
     <header className="relative z-10">
       <div className="max-w-3xl mx-auto px-6 pt-16 pb-12">
-        {/* Gold accent line */}
+        {/* Brass accent line */}
         <div
-          className="w-10 h-[1px] bg-[var(--color-gold)] mb-8 animate-fade-in"
-          style={{ opacity: 0.5 }}
+          className="w-10 h-[1px] bg-[var(--color-brass)] mb-8 animate-fade-in"
+          style={{ opacity: 0.4 }}
         />
 
         {/* Title — ALL CAPS, Avenir Next */}
@@ -18,14 +18,14 @@ export default function Header() {
 
         {/* Tagline */}
         <p
-          className="mt-5 text-[14px] text-[var(--color-slate)] font-light leading-relaxed max-w-sm animate-fade-in"
+          className="mt-5 text-[14px] text-[var(--color-muted)] font-light leading-relaxed max-w-sm animate-fade-in"
           style={{ animationDelay: "150ms" }}
         >
           Videos, podcasts, music &amp; more — all in one place.
         </p>
 
-        {/* Bottom gold divider */}
-        <div className="gold-line w-full mt-10" />
+        {/* Bottom brass divider */}
+        <div className="brass-line w-full mt-10" />
       </div>
     </header>
   );

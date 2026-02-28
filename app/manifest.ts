@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Spiritual formation, financial intelligence, and creative excellence — all in one place.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0B1A2A",
-    theme_color: "#0B1A2A",
+    background_color: "#0A0B12",
+    theme_color: "#0A0B12",
     orientation: "portrait-primary",
     icons: [
       {
