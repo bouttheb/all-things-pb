@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "/Users/benjaminrobinson/local/node-v20.18.3-darwin-arm64/bin/npx",
+      "runtimeArgs": ["next", "dev", "--webpack"],
+      "port": 3000
+    }
+  ]
+}

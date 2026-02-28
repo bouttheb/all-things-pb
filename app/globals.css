@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brand: Primary Palette */
+  --color-navy: #0B1A2A;
+  --color-bone: #F5F3EE;
+  --color-gold: #C6A75E;
+
+  /* Brand: Secondary */
+  --color-slate: #4B5563;
+  --color-charcoal: #1F2933;
+  --color-forest: #1C2B26;
+
+  /* Functional */
+  --color-border: rgba(245, 243, 238, 0.08);
+  --color-border-visible: rgba(245, 243, 238, 0.14);
+  --color-surface: #0F2236;
+  --color-surface-elevated: #132A40;
+
+  /* Platform colors (muted to fit brand) */
+  --color-youtube: #FF0000;
+  --color-instagram: #E4405F;
+  --color-podcast: #9933FF;
+  --color-spotify: #1DB954;
+
+  /* Typography */
+  --font-heading: "Avenir Next", "Avenir", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* ======= BASE ======= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-navy);
+  color: var(--color-bone);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======= SCROLLBAR ======= */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ======= GOLD DIVIDER ======= */
+.gold-line {
+  height: 1px;
+  background-color: var(--color-gold);
+  opacity: 0.4;
+}
+
+/* ======= STORY RING ======= */
+.story-ring {
+  border: 2px solid var(--color-gold);
+  border-radius: 9999px;
+  padding: 2px;
+  transition: opacity 0.3s ease;
+}
+.story-ring:hover {
+  opacity: 0.85;
+}
+
+/* ======= CARD ======= */
+.content-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.3s ease;
+}
+.content-card:hover {
+  border-color: var(--color-border-visible);
+}
+
+/* ======= FILTER PILL ======= */
+.filter-pill {
+  border: 1px solid var(--color-border-visible);
+  background: transparent;
+  transition: all 0.25s ease;
+}
+.filter-pill:hover {
+  border-color: var(--color-bone);
+  color: var(--color-bone);
+}
+.filter-pill.active {
+  background-color: var(--color-bone);
+  border-color: var(--color-bone);
+  color: var(--color-navy);
+}
+
+/* ======= PLAY BUTTON ======= */
+.play-btn {
+  background-color: rgba(245, 243, 238, 0.9);
+  transition: opacity 0.25s ease;
+}
+.play-btn:hover {
+  opacity: 0.85;
+}
+
+/* ======= ANIMATIONS (subtle, restrained) ======= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease both;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 243, 238, 0.03) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+/* Staggered card animations */
+.feed-card:nth-child(1) { animation-delay: 0ms; }
+.feed-card:nth-child(2) { animation-delay: 80ms; }
+.feed-card:nth-child(3) { animation-delay: 160ms; }
+.feed-card:nth-child(4) { animation-delay: 240ms; }
+.feed-card:nth-child(5) { animation-delay: 320ms; }
+.feed-card:nth-child(6) { animation-delay: 400ms; }
+
+/* ======= THUMBNAIL OVERLAY ======= */
+.thumb-overlay {
+  background: linear-gradient(to top, var(--color-navy) 0%, transparent 60%);
+}
