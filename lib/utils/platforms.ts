@@ -21,7 +21,7 @@ export const PLATFORMS: Record<Platform, PlatformConfig> = {
     textClass: "text-pink-500",
   },
   podcast: {
-    name: "Podcast",
+    name: "Podcasts",
     color: "#9933FF",
     bgClass: "bg-purple-600",
     textClass: "text-purple-600",
