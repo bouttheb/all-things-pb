@@ -21,7 +21,7 @@ export default function Header() {
           className="mt-5 text-[14px] text-[var(--color-muted)] font-light leading-relaxed max-w-sm animate-fade-in"
           style={{ animationDelay: "150ms" }}
         >
-          Videos, podcasts, music &amp; more — all in one place.
+          Resources for Growing in Christ &amp; Moving Forward in Life.
         </p>
 
         {/* Bottom brass divider */}

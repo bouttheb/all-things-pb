@@ -9,19 +9,19 @@ interface PlatformConfig {
 
 export const PLATFORMS: Record<Platform, PlatformConfig> = {
   youtube: {
-    name: "YouTube",
+    name: "Videos",
     color: "#FF0000",
     bgClass: "bg-red-600",
     textClass: "text-red-600",
   },
   instagram: {
-    name: "Instagram",
+    name: "Social Media",
     color: "#E4405F",
     bgClass: "bg-pink-500",
     textClass: "text-pink-500",
   },
   podcast: {
-    name: "Podcasts",
+    name: "Podcast",
     color: "#9933FF",
     bgClass: "bg-purple-600",
     textClass: "text-purple-600",
