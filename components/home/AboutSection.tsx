@@ -26,7 +26,7 @@ export default function AboutSection() {
               <img
                 src="/images/benjamin-robinson.png"
                 alt="Benjamin Robinson"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-[center_15%]"
               />
             </div>
           </div>
