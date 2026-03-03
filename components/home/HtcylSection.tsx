@@ -48,7 +48,7 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
               Because something deeper was never addressed.</strong>
             </p>
             <p className="text-[1.3rem] leading-[1.65] text-[#1c1c1c]">
-              <em>How to Change Your Life</em> is a free video series that walks you through the real
+              <em>How to Change Your Life</em> is a life-transforming process that walks you through the real
               framework for lasting transformation&mdash;rooted in biblical wisdom, neuroscience, and
               practical action.
             </p>
