@@ -5,48 +5,67 @@ export default function BooksSection() {
   return (
     <section
       id="books"
-      className="py-14 md:py-20 px-5 md:px-8"
+      className="py-20 px-6 overflow-hidden"
       style={{
         background:
-          "linear-gradient(160deg, #F0EDE8 0%, #EBE7E0 50%, #F0EDE8 100%)",
+          "linear-gradient(160deg, #F0EDE8 0%, #E8E4DC 50%, #F0EDE8 100%)",
       }}
     >
       <div className="max-w-[1200px] mx-auto">
-        <h2 className="section-heading">Books</h2>
-        <p className="text-center text-[0.9rem] text-[var(--color-subtle)] font-light -mt-4 mb-10 max-w-[520px] mx-auto leading-[1.7]">
-          Written to equip the Church, deepen your walk with God, and transform
-          how you think about faith and ministry.
-        </p>
+        {/* ── Section header (matches TOFU pattern) ── */}
+        <div className="text-center mb-14">
+          <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#8A7A66] mb-3 block">
+            From the Author
+          </span>
+          <h2
+            className="text-[clamp(2rem,4vw,2.8rem)] font-bold text-[var(--color-ink)] mb-2"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            Books &amp; Devotionals
+          </h2>
+          <p className="text-[1.05rem] text-[#6B5E4F] font-light italic">
+            For the inner life of the believer and the Christ-centered mission of the Church.
+          </p>
+        </div>
 
         {/* ── Featured: Shepherd of Souls ── */}
-        <div className="max-w-[860px] mx-auto mb-14 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div className="max-w-[1200px] mx-auto mb-20 grid grid-cols-1 md:grid-cols-[auto_1fr] gap-10 md:gap-14 items-center">
           <a
             href={FEATURED_BOOK.url}
             target="_blank"
             rel="noopener"
-            className="shrink-0 block transition-transform duration-300 hover:-translate-y-1"
+            className="flex justify-center shrink-0 block transition-transform duration-300 hover:-translate-y-1"
           >
             <img
               src={FEATURED_BOOK.image}
               alt={FEATURED_BOOK.title}
-              className="w-[180px] md:w-[210px] rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.18)]"
+              className="w-[220px] md:w-[260px] rounded-sm shadow-[0_12px_40px_rgba(0,0,0,0.2)]"
             />
           </a>
           <div className="text-center md:text-left">
             <h3
-              className="text-[1.6rem] md:text-[1.8rem] font-semibold text-[var(--color-ink)] mb-3"
+              className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[var(--color-ink)] mb-1 leading-tight"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               {FEATURED_BOOK.title}
             </h3>
-            <p className="text-[0.95rem] leading-[1.7] text-[var(--color-subtle)] font-light mb-5 max-w-[480px]">
-              {FEATURED_BOOK.description}
+            <p className="text-[0.95rem] text-[#8A7A66] font-light italic mb-5">
+              {FEATURED_BOOK.subtitle}
             </p>
+            <div className="w-[50px] h-[2px] bg-[#C8B898] mb-5 mx-auto md:mx-0" />
+            {FEATURED_BOOK.description?.map((para, i) => (
+              <p
+                key={i}
+                className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light mb-4 max-w-[540px]"
+              >
+                {para}
+              </p>
+            ))}
             <a
               href={FEATURED_BOOK.url}
               target="_blank"
               rel="noopener"
-              className="view-all-link"
+              className="inline-block px-9 py-3 bg-[#1a2840] text-white text-[0.82rem] font-semibold tracking-[0.08em] uppercase no-underline transition-all hover:bg-[#2a3d5c] mt-2"
             >
               Get Your Copy
             </a>
@@ -54,22 +73,25 @@ export default function BooksSection() {
         </div>
 
         {/* ── Divider ── */}
-        <div className="w-[60px] h-[1.5px] bg-[#CCC5BA] mx-auto mb-14" />
+        <div className="w-[60px] h-[2px] bg-[#C8B898] mx-auto mb-16" />
 
         {/* ── Series: Spirit of Life ── */}
-        <div className="max-w-[860px] mx-auto text-center">
+        <div className="max-w-[900px] mx-auto text-center">
+          <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#8A7A66] mb-3 block">
+            A Five-Part Daily Devotional
+          </span>
           <h3
-            className="text-[1.4rem] md:text-[1.6rem] font-semibold text-[var(--color-ink)] mb-3"
+            className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[var(--color-ink)] mb-2"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {SPIRIT_OF_LIFE_SERIES.title}
           </h3>
-          <p className="text-[0.9rem] leading-[1.75] text-[var(--color-subtle)] font-light mb-8 max-w-[600px] mx-auto">
+          <p className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light mb-10 max-w-[600px] mx-auto">
             {SPIRIT_OF_LIFE_SERIES.description}
           </p>
 
           {/* 5-across volume grid */}
-          <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-4 mb-6 max-w-[680px] mx-auto">
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 sm:gap-5 mb-6 max-w-[720px] mx-auto">
             {SPIRIT_OF_LIFE_SERIES.volumes.map((vol) => (
               <a
                 key={vol.title}
@@ -81,9 +103,9 @@ export default function BooksSection() {
                 <img
                   src={vol.image}
                   alt={`Spirit of Life ${vol.title}`}
-                  className="w-full rounded-sm shadow-[0_4px_16px_rgba(0,0,0,0.12)] group-hover:shadow-[0_8px_25px_rgba(0,0,0,0.18)] transition-shadow duration-300"
+                  className="w-full rounded-sm shadow-[0_6px_20px_rgba(0,0,0,0.14)] group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.22)] transition-shadow duration-300"
                 />
-                <span className="block mt-2 text-[0.7rem] tracking-[0.04em] text-[var(--color-muted)] font-medium">
+                <span className="block mt-2.5 text-[0.72rem] tracking-[0.05em] text-[#8A7A66] font-medium">
                   {vol.title}
                 </span>
               </a>

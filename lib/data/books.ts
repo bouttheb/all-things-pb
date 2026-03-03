@@ -1,8 +1,9 @@
 export interface Book {
   title: string;
+  subtitle?: string;
   url: string;
   image: string;
-  description?: string;
+  description?: string[];
 }
 
 export interface BookSeries {
@@ -13,10 +14,13 @@ export interface BookSeries {
 
 export const FEATURED_BOOK: Book = {
   title: "Shepherd of Souls",
+  subtitle: "Recovering the Lost Art of the Pastoral",
   url: "https://amzn.to/4b6i4SM",
   image: "/images/shepherd-of-souls.jpg",
-  description:
-    "My book on the true nature of pastoral ministry and how it applies to the whole body of Christ.",
+  description: [
+    "Pastoral ministry is often reduced to visible functions\u2014preaching, teaching, counseling. Scripture, however, defines the pastoral task more profoundly: the shepherding of the soul. It is not merely the work of church leaders, but the shared responsibility of every believer.",
+    "In a fractured 21st-century world, the strength of our witness depends on whether we recover this task together. We cannot reach the world evangelistically if we fail to shepherd one another spiritually. This book redefines the pastoral as the common calling of the church and equips believers to reclaim its true, biblical center.",
+  ],
 };
 
 export const SPIRIT_OF_LIFE_SERIES: BookSeries = {
