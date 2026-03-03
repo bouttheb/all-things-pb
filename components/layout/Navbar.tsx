@@ -36,7 +36,7 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
           className="no-underline text-[1.15rem] text-white tracking-[0.02em] transition-opacity duration-300 hover:opacity-80"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          thepastor<span className="italic">B</span>
+          <span className="italic">thepastor</span>B
         </Link>
 
         {/* Desktop links */}
@@ -85,7 +85,7 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
             className="mb-4 text-[1.6rem] text-white tracking-[0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            thepastor<span className="italic">B</span>
+            <span className="italic">thepastor</span>B
           </div>
 
           {NAV_LINKS.map((link) => (
