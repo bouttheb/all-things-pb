@@ -43,14 +43,9 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
               You&apos;ve tried to change before. <strong>New Year&apos;s resolutions. Morning routines.
               Accountability partners. Journaling.</strong> And maybe some of it worked&mdash;for a while.
             </p>
-            <p className="text-[1.3rem] leading-[1.65] text-[#1c1c1c] mb-5">
+            <p className="text-[1.3rem] leading-[1.65] text-[#1c1c1c]">
               But eventually, old patterns crept back in. <strong>Not because you didn&apos;t want it enough.
               Because something deeper was never addressed.</strong>
-            </p>
-            <p className="text-[1.3rem] leading-[1.65] text-[#1c1c1c]">
-              <em>How to Change Your Life</em> is a life-transforming process that walks you through the real
-              framework for lasting transformation&mdash;rooted in biblical wisdom, neuroscience, and
-              practical action.
             </p>
           </div>
         </div>
@@ -65,6 +60,13 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
             }}
           >
             <div className="pt-8">
+              <div className="text-left mb-16">
+                <p className="text-[1.3rem] leading-[1.65] text-[#1c1c1c]">
+                  <em>How to Change Your Life</em> is a life-transforming process that walks you through the real
+                  framework for lasting transformation&mdash;rooted in biblical wisdom, neuroscience, and
+                  practical action.
+                </p>
+              </div>
               {/* Benefits */}
               <div className="mb-16">
                 <h3
