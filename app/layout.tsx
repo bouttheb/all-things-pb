@@ -4,11 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "All Things PB",
   description:
-    "Spiritual formation, financial intelligence, and creative excellence — all in one place.",
+    "Resources for Growing in Christ & Moving Forward in Life.",
   openGraph: {
     title: "All Things PB",
     description:
-      "Spiritual formation, financial intelligence, and creative excellence — all in one place.",
+      "Resources for Growing in Christ & Moving Forward in Life.",
     type: "website",
   },
 };
@@ -17,7 +17,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#0A0B12",
+  themeColor: "#111111",
 };
 
 export default function RootLayout({

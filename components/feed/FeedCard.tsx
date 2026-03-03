@@ -19,7 +19,7 @@ function PlatformLabel({ platform }: { platform: Post["platform"] }) {
   return (
     <span
       className="text-[10px] font-semibold uppercase tracking-[0.12em]"
-      style={{ color: config.color, fontFamily: "var(--font-heading)" }}
+      style={{ color: config.color, fontFamily: "var(--font-body)" }}
     >
       {config.name}
     </span>
@@ -62,7 +62,7 @@ export default function FeedCard({ post }: { post: Post }) {
   };
 
   return (
-    <article className="feed-card content-card rounded-sm overflow-hidden animate-fade-in-up">
+    <article className="feed-card content-card rounded-lg overflow-hidden animate-fade-in-up">
       {/* Header row — platform + time */}
       <div className="flex items-center justify-between px-5 pt-4 pb-3">
         <PlatformLabel platform={post.platform} />
@@ -78,7 +78,7 @@ export default function FeedCard({ post }: { post: Post }) {
         ) : post.thumbnail_url ? (
           <button
             onClick={() => setExpanded(true)}
-            className="relative w-full aspect-video overflow-hidden bg-[var(--color-surface)] group"
+            className="relative w-full aspect-video overflow-hidden rounded-md bg-[var(--color-warm)] group"
           >
             <img
               src={post.thumbnail_url}
@@ -115,12 +115,15 @@ export default function FeedCard({ post }: { post: Post }) {
       {/* Title and description */}
       <div className="px-5 pt-3 pb-5">
         {post.title && (
-          <h3 className="text-[14px] font-medium text-[var(--color-bone)] leading-snug line-clamp-2">
+          <h3
+            className="text-[0.78rem] font-semibold text-[var(--color-ink)] leading-snug line-clamp-2"
+            style={{ fontFamily: "var(--font-body)" }}
+          >
             {post.title}
           </h3>
         )}
         {post.description && (
-          <p className="text-[12px] text-[var(--color-muted)] mt-1.5 line-clamp-2 leading-relaxed font-light">
+          <p className="text-[0.78rem] text-[var(--color-subtle)] mt-1.5 line-clamp-2 leading-relaxed font-light">
             {post.description}
           </p>
         )}

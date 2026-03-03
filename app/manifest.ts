@@ -5,11 +5,11 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "All Things PB",
     short_name: "All Things PB",
     description:
-      "Spiritual formation, financial intelligence, and creative excellence — all in one place.",
+      "Resources for Growing in Christ & Moving Forward in Life.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0A0B12",
-    theme_color: "#0A0B12",
+    background_color: "#F5F5F5",
+    theme_color: "#111111",
     orientation: "portrait-primary",
     icons: [
       {

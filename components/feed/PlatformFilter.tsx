@@ -17,21 +17,21 @@ const PLATFORM_LABELS: Record<string, string> = {
 
 export default function PlatformFilter({ selected, onChange }: PlatformFilterProps) {
   return (
-    <div className="sticky top-0 z-40 bg-[var(--color-ink)]/90 backdrop-blur-md border-b border-[var(--color-border)]">
+    <div className="sticky top-0 z-40 bg-[var(--color-cream)]/95 backdrop-blur-md border-b border-[var(--color-border)]">
       <div className="max-w-3xl mx-auto px-6">
-        <div className="flex gap-3 overflow-x-auto hide-scrollbar py-4">
+        <div className="flex gap-2.5 overflow-x-auto hide-scrollbar py-4">
           {/* All button */}
           <button
             onClick={() => onChange("all")}
-            className={`filter-pill shrink-0 px-5 py-2 rounded-sm text-[11px] font-semibold tracking-[0.12em] uppercase transition-all ${
-              selected === "all" ? "active" : "text-[var(--color-muted)]"
+            className={`filter-pill shrink-0 px-5 py-2 text-[0.76rem] font-medium tracking-[0.05em] uppercase transition-all ${
+              selected === "all" ? "active" : "text-[var(--color-ink)]"
             }`}
-            style={{ fontFamily: "var(--font-heading)" }}
+            style={{ fontFamily: "var(--font-body)" }}
           >
             All
           </button>
 
-          {/* Platform pills */}
+          {/* Platform buttons */}
           {PLATFORM_LIST.map((platform) => {
             const label = PLATFORM_LABELS[platform];
             if (!label) return null;
@@ -39,10 +39,10 @@ export default function PlatformFilter({ selected, onChange }: PlatformFilterPro
               <button
                 key={platform}
                 onClick={() => onChange(platform)}
-                className={`filter-pill shrink-0 px-5 py-2 rounded-sm text-[11px] font-semibold tracking-[0.12em] uppercase transition-all ${
-                  selected === platform ? "active" : "text-[var(--color-muted)]"
+                className={`filter-pill shrink-0 px-5 py-2 text-[0.76rem] font-medium tracking-[0.05em] uppercase transition-all ${
+                  selected === platform ? "active" : "text-[var(--color-ink)]"
                 }`}
-                style={{ fontFamily: "var(--font-heading)" }}
+                style={{ fontFamily: "var(--font-body)" }}
               >
                 {label}
               </button>

@@ -1,16 +1,10 @@
 export default function Header() {
   return (
-    <header className="relative z-10">
-      <div className="max-w-3xl mx-auto px-6 pt-16 pb-12">
-        {/* Brass accent line */}
-        <div
-          className="w-10 h-[1px] bg-[var(--color-brass)] mb-8 animate-fade-in"
-          style={{ opacity: 0.4 }}
-        />
-
-        {/* Title — ALL CAPS, Avenir Next */}
+    <header className="relative z-10 bg-[var(--color-ink)] text-white">
+      <div className="max-w-3xl mx-auto px-6 pt-16 pb-14 text-center">
+        {/* Title — matches benjaminrobinson.com hero style */}
         <h1
-          className="text-[clamp(2rem,6vw,3.25rem)] font-bold uppercase tracking-[0.08em] leading-[1.15] text-[var(--color-bone)] animate-fade-in-up"
+          className="text-[clamp(1.8rem,5vw,3rem)] font-bold tracking-[0.1em] leading-[1.2] text-white uppercase animate-fade-in-up"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           All Things PB
@@ -18,14 +12,11 @@ export default function Header() {
 
         {/* Tagline */}
         <p
-          className="mt-5 text-[14px] text-[var(--color-muted)] font-light leading-relaxed max-w-sm animate-fade-in"
-          style={{ animationDelay: "150ms" }}
+          className="mt-4 text-[1rem] text-[var(--color-muted)] font-light leading-relaxed max-w-md mx-auto animate-fade-in tracking-[0.04em]"
+          style={{ animationDelay: "150ms", fontFamily: "var(--font-body)" }}
         >
           Resources for Growing in Christ &amp; Moving Forward in Life.
         </p>
-
-        {/* Bottom brass divider */}
-        <div className="brass-line w-full mt-10" />
       </div>
     </header>
   );

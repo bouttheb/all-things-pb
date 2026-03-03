@@ -41,13 +41,10 @@ export default function InstallPrompt() {
   };
 
   return (
-    <div className="fixed bottom-5 left-5 right-5 z-50 max-w-md mx-auto bg-[var(--color-surface)] border border-[var(--color-border)] rounded-sm p-5 animate-fade-in-up">
+    <div className="fixed bottom-5 left-5 right-5 z-50 max-w-md mx-auto bg-[var(--color-white)] border border-[var(--color-border)] rounded-lg p-5 animate-fade-in-up shadow-lg">
       <div className="flex items-center justify-between gap-4">
         <div className="flex-1 min-w-0">
-          <p
-            className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--color-bone)]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
+          <p className="text-[12px] font-medium text-[var(--color-ink)]">
             Install App
           </p>
           <p className="text-[11px] text-[var(--color-muted)] mt-1 font-light">
@@ -57,15 +54,13 @@ export default function InstallPrompt() {
         <div className="flex gap-3 shrink-0">
           <button
             onClick={handleDismiss}
-            className="text-[11px] text-[var(--color-muted)] hover:text-[var(--color-bone)] px-2 py-1.5 transition-colors tracking-wide uppercase"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="text-[11px] text-[var(--color-muted)] hover:text-[var(--color-ink)] px-2 py-1.5 transition-colors"
           >
             Later
           </button>
           <button
             onClick={handleInstall}
-            className="text-[11px] font-semibold uppercase tracking-[0.1em] bg-[var(--color-bone)] text-[var(--color-ink)] px-5 py-1.5 rounded-sm hover:opacity-90 transition-opacity"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="text-[11px] font-semibold bg-[var(--color-ink)] text-white px-5 py-1.5 hover:opacity-90 transition-opacity"
           >
             Install
           </button>

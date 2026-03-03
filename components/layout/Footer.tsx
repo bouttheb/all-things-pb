@@ -1,15 +1,15 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--color-border)]">
-      <div className="max-w-3xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p
-          className="text-[10px] uppercase tracking-[0.15em] text-[var(--color-muted)] font-medium"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
-          &copy; {new Date().getFullYear()} PB
-        </p>
-        <div className="w-6 h-[1px] bg-[var(--color-brass)]" style={{ opacity: 0.25 }} />
-      </div>
+    <footer className="bg-[var(--color-ink)] py-9 text-center">
+      <p
+        className="text-[0.85rem] font-semibold text-[var(--color-muted)] tracking-[0.08em] uppercase mb-4"
+        style={{ fontFamily: "var(--font-heading)" }}
+      >
+        Benjamin Robinson
+      </p>
+      <p className="text-[0.7rem] text-[rgba(255,255,255,0.2)] tracking-[0.04em]">
+        &copy; {new Date().getFullYear()} All rights reserved
+      </p>
     </footer>
   );
 }
