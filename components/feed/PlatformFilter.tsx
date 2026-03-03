@@ -10,7 +10,6 @@ interface PlatformFilterProps {
 
 const PLATFORM_LABELS: Record<string, string> = {
   youtube: "VIDEOS",
-  instagram: "SOCIAL MEDIA",
   podcast: "PODCASTS",
   spotify: "MUSIC",
 };

@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "All Things PB",
-    short_name: "All Things PB",
+    name: "Benjamin Robinson",
+    short_name: "BR",
     description:
-      "Resources for Growing in Christ & Moving Forward in Life.",
+      "Pastor, recording artist, author. Sermons, music, books, and resources for growing in Christ.",
     start_url: "/",
     display: "standalone",
     background_color: "#F5F5F5",

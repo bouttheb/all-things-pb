@@ -146,3 +146,53 @@ body {
 .feed-card:nth-child(4) { animation-delay: 240ms; }
 .feed-card:nth-child(5) { animation-delay: 320ms; }
 .feed-card:nth-child(6) { animation-delay: 400ms; }
+
+/* ======= HOME PAGE SECTIONS ======= */
+
+/* Hero photo ellipse mask */
+.hero-photo-mask {
+  mask-image: radial-gradient(ellipse 80% 65% at center 45%, black 50%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 65% at center 45%, black 50%, transparent 80%);
+}
+
+/* Section container */
+.site-section {
+  padding: 3.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section heading */
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: var(--color-ink);
+}
+
+/* View-all bordered link */
+.view-all-link {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.5rem 1.5rem;
+  border: 1.5px solid var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+  text-decoration: none;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.view-all-link:hover {
+  background: var(--color-ink);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .site-section {
+    padding: 2.5rem 1.2rem;
+  }
+}

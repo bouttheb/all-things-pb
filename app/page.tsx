@@ -1,60 +1,103 @@
 import { createServerClient } from "@/lib/supabase/server";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import InstallPrompt from "@/components/layout/InstallPrompt";
-import StoriesCarousel from "@/components/stories/StoriesCarousel";
-import FeedList from "@/components/feed/FeedList";
-import type { Post, Story } from "@/types";
+import Navbar from "@/components/layout/Navbar";
+import HeroSection from "@/components/home/HeroSection";
+import MusicSection from "@/components/home/MusicSection";
+import TofuSection from "@/components/home/TofuSection";
+import HtcylSection from "@/components/home/HtcylSection";
+import VideoGrid from "@/components/home/VideoGrid";
+import BooksSection from "@/components/home/BooksSection";
+import AboutSection from "@/components/home/AboutSection";
+import EmailSignupSection from "@/components/home/EmailSignupSection";
+import SiteFooter from "@/components/home/SiteFooter";
+import type { Post } from "@/types";
 
-export const revalidate = 60; // Revalidate page data every 60 seconds
+export const revalidate = 60;
 
-async function getStories(): Promise<Story[]> {
-  try {
-    const supabase = createServerClient();
-    const { data } = await supabase
-      .from("stories")
-      .select("*")
-      .eq("is_expired", false)
-      .gt("expires_at", new Date().toISOString())
-      .order("published_at", { ascending: false });
-    return (data as Story[]) || [];
-  } catch {
-    return [];
-  }
-}
-
-async function getPosts(): Promise<{ posts: Post[]; nextCursor: string | null }> {
+async function getLatestVideos(limit = 4): Promise<Post[]> {
   try {
     const supabase = createServerClient();
     const { data } = await supabase
       .from("posts")
       .select("*")
+      .eq("platform", "youtube")
       .order("published_at", { ascending: false })
-      .limit(20);
-
-    const posts = (data as Post[]) || [];
-    const nextCursor = posts.length === 20 ? posts[posts.length - 1].published_at : null;
-    return { posts, nextCursor };
+      .limit(limit);
+    return (data as Post[]) || [];
   } catch {
-    return { posts: [], nextCursor: null };
+    return [];
+  }
+}
+
+async function getHtcylVideos(): Promise<
+  { id: string; title: string; thumbnail: string }[]
+> {
+  const apiKey = process.env.YOUTUBE_API_KEY;
+  const playlistId = "PLB9--tMk57EH9QRxYiJ8xiPwDHtUn0RcZ";
+  if (!apiKey) return [];
+
+  try {
+    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=9&playlistId=${playlistId}&key=${apiKey}`;
+    const res = await fetch(url, { next: { revalidate: 3600 } });
+    const json = await res.json();
+
+    return (json.items || [])
+      .filter(
+        (item: { snippet: { title: string } }) =>
+          item.snippet.title !== "Private video" &&
+          item.snippet.title !== "Deleted video"
+      )
+      .map(
+        (item: {
+          snippet: {
+            resourceId: { videoId: string };
+            title: string;
+            thumbnails: { high?: { url: string }; medium?: { url: string } };
+          };
+        }) => ({
+          id: item.snippet.resourceId.videoId,
+          title: item.snippet.title,
+          thumbnail:
+            item.snippet.thumbnails.high?.url ||
+            item.snippet.thumbnails.medium?.url ||
+            "",
+        })
+      );
+  } catch {
+    return [];
   }
 }
 
 export default async function Home() {
-  const [stories, { posts, nextCursor }] = await Promise.all([
-    getStories(),
-    getPosts(),
+  const [videos, htcylVideos] = await Promise.all([
+    getLatestVideos(4),
+    getHtcylVideos(),
   ]);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <StoriesCarousel stories={stories} />
-      <main className="flex-1">
-        <FeedList initialPosts={posts} initialCursor={nextCursor} />
-      </main>
-      <Footer />
-      <InstallPrompt />
-    </div>
+    <>
+      <Navbar variant="transparent" />
+      <HeroSection />
+      <MusicSection />
+      <TofuSection />
+      <HtcylSection videos={htcylVideos} />
+      <VideoGrid
+        id="sermons"
+        heading="Sermons"
+        posts={videos}
+        viewAllHref="https://youtube.com/playlist?list=PL6LyMjHR7ziBYXnds8GQIjGfCp0CiD0oX"
+        viewAllLabel="View All Sermons"
+      />
+      <BooksSection />
+      <VideoGrid
+        id="videos"
+        heading="Latest Videos"
+        posts={videos}
+        viewAllHref="https://youtube.com/@thepastor_b"
+        viewAllLabel="Browse All Videos"
+      />
+      <AboutSection />
+      <EmailSignupSection />
+      <SiteFooter />
+    </>
   );
 }

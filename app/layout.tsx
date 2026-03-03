@@ -2,13 +2,13 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "All Things PB",
+  title: "Benjamin Robinson — Words. Music. Wisdom.",
   description:
-    "Resources for Growing in Christ & Moving Forward in Life.",
+    "Pastor, recording artist, author, and content creator. Sermons, music, books, and resources for growing in Christ.",
   openGraph: {
-    title: "All Things PB",
+    title: "Benjamin Robinson — Words. Music. Wisdom.",
     description:
-      "Resources for Growing in Christ & Moving Forward in Life.",
+      "Pastor, recording artist, author, and content creator. Sermons, music, books, and resources for growing in Christ.",
     type: "website",
   },
 };

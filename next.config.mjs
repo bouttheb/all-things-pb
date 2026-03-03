@@ -15,6 +15,7 @@ export default withSerwist({
       { protocol: "https", hostname: "i.ytimg.com" },
       { protocol: "https", hostname: "i.scdn.co" },
       { protocol: "https", hostname: "mosaic.scdn.co" },
+      { protocol: "https", hostname: "www.lineage.us" },
     ],
   },
 });
