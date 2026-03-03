@@ -29,19 +29,21 @@ export default function BooksSection() {
         </div>
 
         {/* ── Featured: Shepherd of Souls ── */}
-        <div className="max-w-[1200px] mx-auto mb-20 grid grid-cols-1 md:grid-cols-[auto_1fr] gap-10 md:gap-14 items-center">
-          <a
-            href={FEATURED_BOOK.url}
-            target="_blank"
-            rel="noopener"
-            className="flex justify-center shrink-0 block transition-transform duration-300 hover:-translate-y-1"
-          >
-            <img
-              src={FEATURED_BOOK.image}
-              alt={FEATURED_BOOK.title}
-              className="w-[220px] md:w-[260px] rounded-sm shadow-[0_12px_40px_rgba(0,0,0,0.2)]"
-            />
-          </a>
+        <div className="max-w-[960px] mx-auto mb-20 grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 items-center">
+          <div className="flex justify-center">
+            <a
+              href={FEATURED_BOOK.url}
+              target="_blank"
+              rel="noopener"
+              className="block transition-transform duration-300 hover:-translate-y-1"
+            >
+              <img
+                src={FEATURED_BOOK.image}
+                alt={FEATURED_BOOK.title}
+                className="w-full max-w-[320px] rounded-sm shadow-[0_12px_40px_rgba(0,0,0,0.2)]"
+              />
+            </a>
+          </div>
           <div className="text-center md:text-left">
             <h3
               className="text-[clamp(1.6rem,3vw,2.2rem)] font-bold text-[var(--color-ink)] mb-1 leading-tight"
@@ -56,7 +58,7 @@ export default function BooksSection() {
             {FEATURED_BOOK.description?.map((para, i) => (
               <p
                 key={i}
-                className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light mb-4 max-w-[540px]"
+                className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light mb-4"
               >
                 {para}
               </p>
