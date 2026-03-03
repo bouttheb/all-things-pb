@@ -80,13 +80,6 @@ export default async function Home() {
       <MusicSection />
       <TofuSection />
       <HtcylSection videos={htcylVideos} />
-      <VideoGrid
-        id="sermons"
-        heading="Sermons"
-        posts={videos}
-        viewAllHref="https://youtube.com/playlist?list=PL6LyMjHR7ziBYXnds8GQIjGfCp0CiD0oX"
-        viewAllLabel="View All Sermons"
-      />
       <BooksSection />
       <VideoGrid
         id="videos"
