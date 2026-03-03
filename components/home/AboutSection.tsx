@@ -20,12 +20,12 @@ export default function AboutSection() {
         </div>
 
         {/* ── Photo + Bio ── */}
-        <div className="max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-[360px_1fr] gap-10 md:gap-16 items-start">
+        <div className="max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10 md:gap-16 items-center">
           <div className="flex justify-center">
             <img
               src="/images/benjamin-no-bg.png"
               alt="Benjamin Robinson"
-              className="w-full max-w-[360px]"
+              className="w-full max-w-[300px]"
             />
           </div>
           <div className="text-center md:text-left">
