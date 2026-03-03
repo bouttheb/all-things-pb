@@ -24,26 +24,33 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
       <div className="max-w-[720px] mx-auto">
         {/* ── Hook (always visible) ── */}
         <div className="text-center mb-8">
+          <span className="text-[0.7rem] tracking-[0.2em] uppercase text-[#8A7A66] mb-3 block">
+            A Free Video Series
+          </span>
           <h2
-            className="text-[clamp(2.2rem,5vw,3.2rem)] font-bold text-[var(--color-dark)] mb-8 leading-[1.15]"
+            className="text-[clamp(2rem,4vw,2.8rem)] font-bold text-[var(--color-ink)] mb-2"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            If You&apos;re Tired of Starting Over, Read This
+            How to Change Your Life
           </h2>
+          <p className="text-[1.05rem] text-[#6B5E4F] font-light italic mb-6">
+            If You&apos;re Tired of Starting Over, Read This
+          </p>
+          <div className="w-[50px] h-[2px] bg-[#C8B898] mb-8 mx-auto" />
           <a
             href={PLAYLIST_URL}
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center gap-2.5 px-10 py-4 bg-[#c0392b] text-white text-[1rem] font-semibold tracking-[0.03em] no-underline transition-all rounded-[4px] mb-8 shadow-[0_4px_14px_rgba(192,57,43,0.3)] hover:bg-[#a93226] hover:shadow-[0_6px_20px_rgba(192,57,43,0.4)]"
+            className="inline-block px-9 py-3 bg-[#c0392b] text-white text-[0.82rem] font-semibold tracking-[0.08em] uppercase no-underline transition-all hover:bg-[#a93226] mb-8"
           >
             &#9654; Watch the Free Series
           </a>
           <div className="text-left">
-            <p className="text-[1.3rem] leading-[1.65] text-[#1c1c1c] mb-5">
+            <p className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light mb-4">
               You&apos;ve tried to change before. <strong>New Year&apos;s resolutions. Morning routines.
               Accountability partners. Journaling.</strong> And maybe some of it worked&mdash;for a while.
             </p>
-            <p className="text-[1.3rem] leading-[1.65] text-[#1c1c1c]">
+            <p className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light">
               But eventually, old patterns crept back in. <strong>Not because you didn&apos;t want it enough.
               Because something deeper was never addressed.</strong>
             </p>
@@ -61,7 +68,7 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
           >
             <div className="pt-8">
               <div className="text-left mb-16">
-                <p className="text-[1.3rem] leading-[1.65] text-[#1c1c1c]">
+                <p className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light">
                   <em>How to Change Your Life</em> is a life-transforming process that walks you through the real
                   framework for lasting transformation&mdash;rooted in biblical wisdom, neuroscience, and
                   practical action.
@@ -70,7 +77,7 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
               {/* Benefits */}
               <div className="mb-16">
                 <h3
-                  className="text-[1.7rem] font-bold text-[var(--color-dark)] mb-5 leading-tight"
+                  className="text-[clamp(1.4rem,3vw,1.8rem)] font-bold text-[var(--color-ink)] mb-5 leading-tight"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   In This Free Series, You&apos;ll Learn:
@@ -84,7 +91,7 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="text-[1.15rem] leading-[1.6] text-[#1c1c1c] pl-8 relative before:content-[''] before:absolute before:left-0 before:top-[0.55rem] before:w-2 before:h-2 before:bg-[#c0392b] before:rounded-full"
+                      className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light pl-8 relative before:content-[''] before:absolute before:left-0 before:top-[0.55rem] before:w-2 before:h-2 before:bg-[#c0392b] before:rounded-full"
                     >
                       {item}
                     </li>
@@ -139,23 +146,23 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
                 />
                 <div>
                   <h3
-                    className="text-[1.7rem] font-bold text-[var(--color-dark)] mb-5 leading-tight"
+                    className="text-[clamp(1.4rem,3vw,1.8rem)] font-bold text-[var(--color-ink)] mb-5 leading-tight"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     If You&apos;re Serious About Change, This Is Where the Work Happens
                   </h3>
-                  <p className="text-[1.15rem] leading-[1.7] text-[#1c1c1c] mb-4">
+                  <p className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light mb-4">
                     This companion workbook includes guided exercises, reflection prompts, and practical
                     frameworks from the video series. It&apos;s designed to move you from inspiration to implementation.
                   </p>
-                  <p className="text-[1.15rem] leading-[1.7] text-[#1c1c1c] font-bold">
+                  <p className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-semibold">
                     Stop consuming. Start becoming.
                   </p>
                   <a
                     href="https://amzn.to/4kFbebc"
                     target="_blank"
                     rel="noopener"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-[var(--color-dark)] text-white text-[0.88rem] font-semibold tracking-[0.05em] uppercase no-underline transition-all rounded-[3px] mt-5 shadow-[0_4px_14px_rgba(0,0,0,0.15)] hover:bg-[#333]"
+                    className="inline-block px-9 py-3 bg-[var(--color-ink)] text-white text-[0.82rem] font-semibold tracking-[0.08em] uppercase no-underline transition-all hover:bg-[#333] mt-5"
                   >
                     Get the Companion Workbook
                   </a>
@@ -165,19 +172,19 @@ export default function HtcylSection({ videos = [] }: HtcylSectionProps) {
               {/* Closing */}
               <div className="text-center pt-8 border-t border-black/10">
                 <h3
-                  className="text-[clamp(1.6rem,3.5vw,2.2rem)] font-bold text-[var(--color-dark)] mb-5 leading-[1.25]"
+                  className="text-[clamp(1.6rem,3.5vw,2.2rem)] font-bold text-[var(--color-ink)] mb-4 leading-[1.25]"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   You Can Keep Restarting. Or You Can Change.
                 </h3>
-                <p className="text-[1.15rem] leading-[1.7] text-[#1c1c1c] mb-4">
+                <p className="text-[0.95rem] leading-[1.75] text-[#5C534A] font-light mb-6">
                   This series is free. The workbook is available. The only thing missing is your decision.
                 </p>
                 <a
                   href={PLAYLIST_URL}
                   target="_blank"
                   rel="noopener"
-                  className="inline-flex items-center gap-2.5 px-10 py-4 bg-[#c0392b] text-white text-[1rem] font-semibold tracking-[0.03em] no-underline transition-all rounded-[4px] shadow-[0_4px_14px_rgba(192,57,43,0.3)] hover:bg-[#a93226]"
+                  className="inline-block px-9 py-3 bg-[#c0392b] text-white text-[0.82rem] font-semibold tracking-[0.08em] uppercase no-underline transition-all hover:bg-[#a93226]"
                 >
                   &#9654; Start the Series Now
                 </a>
