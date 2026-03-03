@@ -23,7 +23,7 @@ export default function AboutSection() {
         <div className="max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 md:gap-16 items-center">
           <div className="flex justify-center">
             <img
-              src="/images/about-photo.png"
+              src="/images/benjamin-robinson.png"
               alt="Benjamin Robinson"
               className="w-full max-w-[360px] rounded-sm shadow-[0_12px_40px_rgba(0,0,0,0.15)] object-cover"
             />
