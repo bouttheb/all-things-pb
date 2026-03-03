@@ -50,14 +50,34 @@ export default function TofuSection() {
               <span className="text-[1.1rem]">&#128161;</span> Daily Reflection Prompts
             </div>
           </div>
-          <a
-            href="https://amzn.to/4r8R4sE"
-            target="_blank"
-            rel="noopener"
-            className="inline-block px-9 py-3 bg-[#1a2840] text-white text-[0.82rem] font-semibold tracking-[0.08em] uppercase no-underline transition-all hover:bg-[#2a3d5c]"
-          >
-            Get Your Copy
-          </a>
+          <div className="flex flex-col gap-3 items-center md:items-start">
+            <div className="flex gap-3">
+              <a
+                href="https://amzn.to/4u88NlF"
+                target="_blank"
+                rel="noopener"
+                className="inline-block px-7 py-3 bg-[#C8B898] text-[#1a2840] text-[0.78rem] font-semibold tracking-[0.1em] uppercase no-underline transition-all hover:bg-[#D4C8A8]"
+              >
+                8.5 × 11 Edition
+              </a>
+              <a
+                href="https://amzn.to/40rPt5z"
+                target="_blank"
+                rel="noopener"
+                className="inline-block px-7 py-3 border-[1.5px] border-[#1a2840]/40 text-[#1a2840] text-[0.78rem] font-semibold tracking-[0.1em] uppercase no-underline transition-all hover:bg-[#1a2840] hover:text-white"
+              >
+                6 × 9 Edition
+              </a>
+            </div>
+            <a
+              href="https://tofujournal.com"
+              target="_blank"
+              rel="noopener"
+              className="inline-block px-9 py-3 bg-[#1a2840] text-white text-[0.78rem] font-semibold tracking-[0.1em] uppercase no-underline transition-all hover:bg-[#2a3d5c]"
+            >
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
     </section>
