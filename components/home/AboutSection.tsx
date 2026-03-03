@@ -22,11 +22,11 @@ export default function AboutSection() {
         {/* ── Photo + Bio ── */}
         <div className="max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-[280px_1fr] gap-10 md:gap-16 items-start">
           <div className="flex justify-center">
-            <div className="w-full max-w-[280px] aspect-[4/4] rounded-sm shadow-[0_12px_40px_rgba(0,0,0,0.15)] overflow-hidden">
+            <div className="w-full max-w-[280px] aspect-[3.5/4] rounded-sm shadow-[0_12px_40px_rgba(0,0,0,0.15)] overflow-hidden">
               <img
                 src="/images/benjamin-robinson.png"
                 alt="Benjamin Robinson"
-                className="w-full h-full object-cover object-[center_25%]"
+                className="w-full h-full object-cover object-[center_20%]"
               />
             </div>
           </div>
