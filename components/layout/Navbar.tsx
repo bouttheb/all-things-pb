@@ -7,7 +7,6 @@ import { useScrolled } from "@/lib/hooks/useScrolled";
 const NAV_LINKS = [
   { label: "Music", href: "/#music" },
   { label: "Books", href: "/#books" },
-  { label: "Videos", href: "/#videos" },
   { label: "About", href: "/#about" },
   { label: "Feed", href: "/feed" },
 ];

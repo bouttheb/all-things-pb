@@ -4,8 +4,8 @@ import HeroSection from "@/components/home/HeroSection";
 import MusicSection from "@/components/home/MusicSection";
 import TofuSection from "@/components/home/TofuSection";
 import HtcylSection from "@/components/home/HtcylSection";
-import VideoGrid from "@/components/home/VideoGrid";
 import BooksSection from "@/components/home/BooksSection";
+import HomeFeedSection from "@/components/home/HomeFeedSection";
 import AboutSection from "@/components/home/AboutSection";
 import EmailSignupSection from "@/components/home/EmailSignupSection";
 import SiteFooter from "@/components/home/SiteFooter";
@@ -13,13 +13,12 @@ import type { Post } from "@/types";
 
 export const revalidate = 60;
 
-async function getLatestVideos(limit = 4): Promise<Post[]> {
+async function getLatestPosts(limit = 6): Promise<Post[]> {
   try {
     const supabase = createServerClient();
     const { data } = await supabase
       .from("posts")
       .select("*")
-      .eq("platform", "youtube")
       .order("published_at", { ascending: false })
       .limit(limit);
     return (data as Post[]) || [];
@@ -68,8 +67,8 @@ async function getHtcylVideos(): Promise<
 }
 
 export default async function Home() {
-  const [videos, htcylVideos] = await Promise.all([
-    getLatestVideos(4),
+  const [posts, htcylVideos] = await Promise.all([
+    getLatestPosts(6),
     getHtcylVideos(),
   ]);
 
@@ -81,13 +80,7 @@ export default async function Home() {
       <TofuSection />
       <HtcylSection videos={htcylVideos} />
       <BooksSection />
-      <VideoGrid
-        id="videos"
-        heading="Latest Videos"
-        posts={videos}
-        viewAllHref="https://youtube.com/@thepastor_b"
-        viewAllLabel="Browse All Videos"
-      />
+      <HomeFeedSection posts={posts} />
       <AboutSection />
       <EmailSignupSection />
       <SiteFooter />
