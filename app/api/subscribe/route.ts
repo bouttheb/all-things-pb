@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
-    const { email } = await request.json();
+    const { name, email } = await request.json();
 
     if (!email || typeof email !== "string" || !email.includes("@")) {
       return NextResponse.json(
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        records: [{ fields: { Email: email.trim().toLowerCase() } }],
+        records: [{ fields: { Name: name?.trim() || "", Email: email.trim().toLowerCase() } }],
       }),
     });
 
