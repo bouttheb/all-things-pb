@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 px-6 overflow-hidden">
+    <section id="about" className="py-20 px-6 overflow-hidden bg-[var(--color-cream)]">
       <div className="max-w-[1200px] mx-auto">
         {/* ── Section header ── */}
         <div className="text-center mb-14">
