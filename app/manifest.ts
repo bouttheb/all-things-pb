@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Benjamin Robinson",
-    short_name: "BR",
+    name: "thepastorb",
+    short_name: "pastorb",
     description:
       "Pastor, recording artist, author. Sermons, music, books, and resources for growing in Christ.",
     start_url: "/",

@@ -33,10 +33,26 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
         {/* Logo */}
         <Link
           href="/"
-          className="text-[1.05rem] font-semibold text-white tracking-[0.03em] no-underline"
-          style={{ fontFamily: "var(--font-heading)" }}
+          className="no-underline flex items-baseline gap-0 group"
         >
-          Benjamin Robinson
+          <span
+            className="text-[0.65rem] font-light tracking-[0.18em] uppercase text-white/50 mr-[3px] transition-colors duration-300 group-hover:text-white/70"
+            style={{ fontFamily: "var(--font-body)" }}
+          >
+            the
+          </span>
+          <span
+            className="text-[1.15rem] font-semibold text-white tracking-[0.02em] transition-colors duration-300"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            pastor
+          </span>
+          <span
+            className="text-[1.35rem] font-bold italic text-[#C8B898] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#D4C8A8]"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            b
+          </span>
         </Link>
 
         {/* Desktop links */}
@@ -79,7 +95,29 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
 
       {/* Mobile fullscreen overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[999] bg-[rgba(10,10,10,0.98)] flex flex-col justify-center items-center gap-8">
+        <div className="fixed inset-0 z-[999] bg-[#0A0A0A] flex flex-col justify-center items-center gap-8">
+          {/* Logo in mobile menu */}
+          <div className="mb-4 flex items-baseline gap-0">
+            <span
+              className="text-[0.8rem] font-light tracking-[0.18em] uppercase text-white/50 mr-[3px]"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              the
+            </span>
+            <span
+              className="text-[1.6rem] font-semibold text-white tracking-[0.02em]"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              pastor
+            </span>
+            <span
+              className="text-[1.85rem] font-bold italic text-[#C8B898] tracking-[-0.01em]"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              b
+            </span>
+          </div>
+
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

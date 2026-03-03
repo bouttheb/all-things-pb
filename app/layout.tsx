@@ -2,11 +2,11 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Benjamin Robinson — Words. Music. Wisdom.",
+  title: "thepastorb — Words. Music. Wisdom.",
   description:
     "Pastor, recording artist, author, and content creator. Sermons, music, books, and resources for growing in Christ.",
   openGraph: {
-    title: "Benjamin Robinson — Words. Music. Wisdom.",
+    title: "thepastorb — Words. Music. Wisdom.",
     description:
       "Pastor, recording artist, author, and content creator. Sermons, music, books, and resources for growing in Christ.",
     type: "website",
