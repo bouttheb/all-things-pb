@@ -66,7 +66,7 @@ export default async function FeedPage() {
             className="text-[clamp(1.8rem,5vw,3rem)] text-white tracking-[0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            <span className="italic">thepastor</span>B
+            thepastorb
           </h1>
           <p className="mt-3 text-[1rem] text-[var(--color-muted)] font-light tracking-[0.04em]">
             Resources for Growing in Christ &amp; Moving Forward in Life.
