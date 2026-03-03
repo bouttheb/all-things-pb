@@ -62,25 +62,11 @@ export default async function FeedPage() {
       {/* Feed header */}
       <header className="bg-[var(--color-ink)] text-white">
         <div className="max-w-3xl mx-auto px-6 pt-10 pb-8 text-center">
-          <h1 className="flex items-baseline justify-center gap-0">
-            <span
-              className="text-[clamp(0.7rem,1.5vw,0.9rem)] font-light tracking-[0.18em] uppercase text-white/50 mr-[4px]"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
-              the
-            </span>
-            <span
-              className="text-[clamp(1.8rem,5vw,3rem)] font-bold text-white tracking-[0.02em]"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              pastor
-            </span>
-            <span
-              className="text-[clamp(2.1rem,5.5vw,3.4rem)] font-bold italic text-[#C8B898] tracking-[-0.01em]"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              b
-            </span>
+          <h1
+            className="text-[clamp(1.8rem,5vw,3rem)] text-white tracking-[0.02em]"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            thepastor<span className="italic">B</span>
           </h1>
           <p className="mt-3 text-[1rem] text-[var(--color-muted)] font-light tracking-[0.04em]">
             Resources for Growing in Christ &amp; Moving Forward in Life.
