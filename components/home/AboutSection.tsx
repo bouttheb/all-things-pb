@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 px-6 overflow-hidden bg-[#2A2A2A]">
+    <section id="about" className="py-20 px-6 overflow-hidden bg-[#151515]">
       <div className="max-w-[1200px] mx-auto">
         {/* ── Section header ── */}
         <div className="text-center mb-14">
@@ -43,7 +43,7 @@ export default function AboutSection() {
               >
                 Lineage Church
               </a>{" "}
-              in the San Francisco Bay Area, he builds communities where belonging and spiritual growth
+              in El Cerrito, California, he builds communities where belonging and spiritual growth
               move together.
             </p>
             <p className="text-[0.95rem] leading-[1.75] text-[#B8AFA6] font-light mb-4">
