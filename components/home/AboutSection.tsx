@@ -47,7 +47,7 @@ export default function AboutSection() {
               move together.
             </p>
             <p className="text-[0.95rem] leading-[1.75] text-[#B8AFA6] font-light mb-4">
-              His work spans preaching, writing, music production, and disciplined market analysis, all
+              His work spans preaching, writing, and music production, all
               anchored in integrity and excellence. Through practical frameworks like TOFU Journaling, he
               equips people to cultivate devotion, clarity, and long-term transformation.
             </p>
