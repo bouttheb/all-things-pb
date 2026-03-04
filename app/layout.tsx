@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Benjamin Robinson (The Pastor B) teaches on identity in Christ, devotion, and spiritual growth through sermons, music, books, and resources.",
   metadataBase: new URL("https://www.thepastorb.com"),
+  alternates: {
+    canonical: "https://www.thepastorb.com",
+  },
   openGraph: {
     title: "The Pastor B",
     description:
