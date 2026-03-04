@@ -81,6 +81,18 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-963948091"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-963948091');
+          `}
+        </Script>
       </head>
       <body className="antialiased min-h-screen">
         <script
