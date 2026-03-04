@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.thepastorb.com",
   },
+  verification: {
+    google: "u7waQ3PWFHNOg0bpSpxu5GSY85piDb8K8QRJueDFKkE",
+  },
   openGraph: {
     title: "The Pastor B",
     description:
