@@ -10,6 +10,14 @@ export const metadata: Metadata = {
     description:
       "Pastor, recording artist, author, and content creator. Sermons, music, books, and resources for growing in Christ.",
     type: "website",
+    images: [
+      {
+        url: "/images/og-hero.png",
+        width: 1200,
+        height: 425,
+        alt: "Benjamin Robinson — Words. Music. Wisdom.",
+      },
+    ],
   },
 };
 
