@@ -22,18 +22,12 @@ export default function HeroSection() {
         <p className="text-[1rem] text-[var(--color-muted)] tracking-[0.04em] font-light mb-7">
           Words. Music. Wisdom.
         </p>
-        <div className="flex gap-3 justify-center flex-wrap">
+        <div className="flex justify-center">
           <a
-            href="#sermons"
+            href="/feed"
             className="hero-btn px-6 py-2 border-[1.5px] border-white/80 bg-transparent text-white text-[0.8rem] tracking-[0.07em] font-medium no-underline transition-all hover:bg-white hover:text-[var(--color-ink)]"
           >
-            Sermons
-          </a>
-          <a
-            href="#music"
-            className="hero-btn px-6 py-2 border-[1.5px] border-white/80 bg-transparent text-white text-[0.8rem] tracking-[0.07em] font-medium no-underline transition-all hover:bg-white hover:text-[var(--color-ink)]"
-          >
-            Music
+            See What&#39;s New
           </a>
         </div>
       </div>
