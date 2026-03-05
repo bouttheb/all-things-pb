@@ -57,14 +57,14 @@ export default function EmailSignupSection() {
             onSubmit={handleSubmit}
             className="flex flex-col items-center gap-3 max-w-[420px] mx-auto"
           >
-            <div className="flex w-full gap-0">
+            <div className="flex flex-col sm:flex-row w-full gap-0">
               <input
                 type="text"
                 placeholder="First name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 disabled={status === "loading"}
-                className="w-[140px] px-3.5 py-2.5 border border-[var(--color-ink)]/20 border-r-0 bg-white text-[var(--color-ink)] text-[0.82rem] font-[inherit] outline-none placeholder:text-[#8A7A66] focus:border-[var(--color-ink)]/40 disabled:opacity-50"
+                className="w-full sm:w-[140px] px-3.5 py-2.5 border border-[var(--color-ink)]/20 sm:border-r-0 bg-white text-[var(--color-ink)] text-[0.82rem] font-[inherit] outline-none placeholder:text-[#8A7A66] focus:border-[var(--color-ink)]/40 disabled:opacity-50"
               />
               <input
                 type="email"
@@ -73,12 +73,12 @@ export default function EmailSignupSection() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={status === "loading"}
-                className="flex-1 px-3.5 py-2.5 border border-[var(--color-ink)]/20 border-r-0 bg-white text-[var(--color-ink)] text-[0.82rem] font-[inherit] outline-none placeholder:text-[#8A7A66] focus:border-[var(--color-ink)]/40 disabled:opacity-50"
+                className="w-full sm:flex-1 px-3.5 py-2.5 border border-[var(--color-ink)]/20 border-t-0 sm:border-t sm:border-r-0 bg-white text-[var(--color-ink)] text-[0.82rem] font-[inherit] outline-none placeholder:text-[#8A7A66] focus:border-[var(--color-ink)]/40 disabled:opacity-50"
               />
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="px-5 py-2.5 bg-[var(--color-ink)] text-white border-none text-[0.76rem] font-semibold tracking-[0.05em] cursor-pointer hover:bg-[#333] disabled:opacity-50"
+                className="w-full sm:w-auto px-5 py-2.5 bg-[var(--color-ink)] text-white border-none text-[0.76rem] font-semibold tracking-[0.05em] cursor-pointer hover:bg-[#333] disabled:opacity-50"
               >
                 {status === "loading" ? "..." : "Subscribe"}
               </button>
